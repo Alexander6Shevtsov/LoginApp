@@ -9,7 +9,7 @@ import UIKit
 
 final class UserInfoViewController: UIViewController {
     
-    @IBOutlet var photoImage: UIImageView! {
+    @IBOutlet var photoImage: UIImageView! { // скругляем фото
         didSet {
             photoImage.layer.cornerRadius = photoImage.frame.height / 2
         }

@@ -5,14 +5,13 @@
 //  Created by Alexander Shevtsov on 27.07.2024.
 //
 
+import Foundation // не импортировать фреймворки!
 
-import Foundation
-
-struct User {
-    let id = UUID()
+struct User { // основная модель
+    let id = UUID() //
     let login: String
     let password: String
-    let person: Person
+    let person: Person // другая модель
     
     static func getUser() -> User {
         User(
@@ -30,7 +29,7 @@ struct Person {
     let bio: String
     let job: Company
     
-    var fullName: String {
+    var fullName: String { // чтоб не повторять имя и фамилию
         "\(name) \(surname)"
     }
     
